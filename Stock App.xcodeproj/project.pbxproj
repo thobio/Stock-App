@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		C87CBD00265FBC4F00E3B030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87CBCFE265FBC4F00E3B030 /* Main.storyboard */; };
 		C87CBD02265FBC5300E3B030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C87CBD01265FBC5300E3B030 /* Assets.xcassets */; };
 		C87CBD05265FBC5300E3B030 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87CBD03265FBC5300E3B030 /* LaunchScreen.storyboard */; };
+		C87CBD0F265FBFCC00E3B030 /* Loaf in Frameworks */ = {isa = PBXBuildFile; productRef = C87CBD0E265FBFCC00E3B030 /* Loaf */; };
+		C87CBD13265FC01D00E3B030 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = C87CBD12265FC01D00E3B030 /* MBProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87CBD13265FC01D00E3B030 /* MBProgressHUD in Frameworks */,
+				C87CBD0F265FBFCC00E3B030 /* Loaf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = "Stock App";
+			packageProductDependencies = (
+				C87CBD0E265FBFCC00E3B030 /* Loaf */,
+				C87CBD12265FC01D00E3B030 /* MBProgressHUD */,
+			);
 			productName = "Stock App";
 			productReference = C87CBCF5265FBC4F00E3B030 /* Stock App.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +118,10 @@
 				Base,
 			);
 			mainGroup = C87CBCEC265FBC4F00E3B030;
+			packageReferences = (
+				C87CBD0D265FBFCC00E3B030 /* XCRemoteSwiftPackageReference "Loaf" */,
+				C87CBD11265FC01D00E3B030 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = C87CBCF6265FBC4F00E3B030 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,6 +353,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C87CBD0D265FBFCC00E3B030 /* XCRemoteSwiftPackageReference "Loaf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/schmidyy/Loaf";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
+			};
+		};
+		C87CBD11265FC01D00E3B030 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C87CBD0E265FBFCC00E3B030 /* Loaf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C87CBD0D265FBFCC00E3B030 /* XCRemoteSwiftPackageReference "Loaf" */;
+			productName = Loaf;
+		};
+		C87CBD12265FC01D00E3B030 /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C87CBD11265FC01D00E3B030 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C87CBCED265FBC4F00E3B030 /* Project object */;
 }
